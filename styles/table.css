@@ -1,0 +1,118 @@
+table {
+    width: 100%;
+    margin: 2rem 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: var(--c6);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+thead {
+    background: linear-gradient(135deg, var(--c3), var(--c2));
+    color: var(--c6);
+}
+
+thead th {
+    padding: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+tbody tr {
+    background-color: var(--c6);
+    transition: all 0.3s ease;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--c5);
+}
+
+tbody tr:hover {
+    background-color: var(--c4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+tbody td {
+    padding: 1.2rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--c1);
+    border-top: 1px solid var(--c4);
+}
+
+tbody td:first-child {
+    font-weight: bold;
+    color: var(--c3);
+}
+
+tfoot {
+    background-color: var(--c2);
+    color: var(--c1);
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.95rem;
+    border-top: 2px solid var(--c4);
+}
+
+.btn-deletar {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btn-deletar:hover {
+    background-color: #c0392b;
+}
+
+
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 1.5rem;
+        background: var(--c6);
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        overflow: hidden;
+    }
+
+    tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.8rem 1rem;
+        text-align: left;
+        border-bottom: 1px solid var(--c4);
+        position: relative;
+    }
+
+    tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        color: var(--c3);
+        font-size: 0.9rem;
+        flex-basis: 50%;
+        text-align: left;
+    }
+}
+
+
+

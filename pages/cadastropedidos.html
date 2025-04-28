@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Lanchonete</h1>
+        <div>
+            <button id="toggleCompleted">A Caminho</button>
+            <button onclick="window.location.href='./finalizados.html'">Pedidos Finalizados</button>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Cadastrar Pedido</h2>
+            <form id="orderForm">
+                <label for="name">Nome do Cliente:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required>
+
+                <label for="product">Produto:</label>
+                <select id="product" name="product" required>
+                    <option value="Hamburguer">Hamburguer</option>
+                    <option value="X-Burguer">X-Burguer</option>
+                    <option value="X-Salada">X-Salada</option>
+                    <option value="X-Bacon">X-Bacon</option>
+                    <option value="X-Egg">X-Egg</option>
+                    <option value="X-Tudo">X-Tudo</option>
+                </select>
+                <button type="submit">Gerar Pedido</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Pedidos em Execução</h2>
+            <ul id="orderList"></ul>
+        </section>
+
+        <section id="deliverySection" style="display: none;">
+            <h2>Pedidos a Caminho</h2>
+            <ul id="deliveryList"></ul>
+        </section>
+    </main>
+    <script src="../scripts/cadastro.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos Finalizados</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/table.css">
+</head>
+<body>
+    <header>
+        <h1>Pedidos Finalizados</h1>
+        <nav>
+            <button onclick="window.location.href='./cadastropedidos.html'">Voltar</button>
+        </nav>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Endereço</th>
+                    <th>Produto</th>
+                    <th>Valor pedido</th>
+                    <th>Data do Pedido</th>
+                    <th>Hora do Pedido</th>
+                    <th>Data de Saída</th>
+                    <th>Hora de Saída</th>
+                    <th>Data de Entrega</th>
+                    <th>Hora de Entrega</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody id="finalizados"></tbody>
+        </table>
+        <section>
+            <h2>Total Arrecadado: R$ <span id="totalValor">0.00</span></h2>
+        </section>
+    </main>
+    <script src="../scripts/finalizados.js"></script>
+</body>
+</html>

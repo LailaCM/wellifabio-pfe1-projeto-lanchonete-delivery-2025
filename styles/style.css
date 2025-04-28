@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --c1: #222831;
+    --c2: #FFD369;
+    --c3: #FF5722;
+    --c4: #EEEEEE;
+    --c5: #F5F5F5;
+    --c6: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--c5);
+    color: var(--c1);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, var(--c3), var(--c2));
+    color: var(--c6);
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+header button {
+    margin-top: 1rem;
+    background-color: var(--c1);
+    color: var(--c6);
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+header button:hover {
+    background-color: var(--c2);
+    color: var(--c1);
+}
+
+main {
+    padding: 2rem 1rem;
+    max-width: 1000px;
+    margin: auto;
+    width: 90%;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: var(--c3);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--c2);
+    margin-top: 0.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--c6);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+form label {
+    font-weight: 600;
+    color: var(--c1);
+}
+
+form input,
+form select {
+    padding: 0.75rem;
+    border: 1px solid var(--c4);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+    border-color: var(--c3);
+    outline: none;
+}
+
+form button {
+    background-color: var(--c3);
+    color: var(--c6);
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+form button:hover {
+    background-color: var(--c2);
+    color: var(--c1);
+}
+
+table {
+    width: 100%;
+    margin: 2rem 0;
+    border-collapse: separate;
+    border-spacing: 0 0.5rem;
+    background-color: var(--c6);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+thead {
+    background-color: var(--c3);
+    color: var(--c6);
+}
+
+thead th {
+    padding: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+tbody tr {
+    background-color: var(--c6);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: var(--c4);
+    transform: scale(1.01);
+}
+
+tbody td {
+    padding: 1rem;
+    color: var(--c1);
+    border-top: 1px solid var(--c4);
+}
+
+tbody td:first-child {
+    font-weight: bold;
+    color: var(--c3);
+}
+
+tfoot {
+    background-color: var(--c2);
+    color: var(--c1);
+    text-align: center;
+    font-size: 0.95rem;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: var(--c6);
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+li:hover {
+    transform: translateY(-3px);
+}
+
+li button {
+    background-color: var(--c2);
+    color: var(--c1);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+li button:hover {
+    background-color: var(--c3);
+    color: var(--c6);
+}
+
+footer {
+    background: linear-gradient(135deg, var(--c3), var(--c2));
+    color: var(--c6);
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 1rem;
+        background: var(--c6);
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    tbody td {
+        padding: 0.75rem;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--c4);
+    }
+
+    tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: var(--c3);
+        margin-right: 1rem;
+    }
+}
